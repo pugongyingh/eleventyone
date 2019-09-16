@@ -2,7 +2,7 @@
 
 
 const axios  = require('axios');
-//const seed   = require('../../../utils/save-seed.js');
+const seed   = require('save-seed.js');
 
 
 // Once a googel sheet is "published to the web" we can access its JSON
@@ -34,7 +34,7 @@ exports.handler = async (event, context) => {
 
         // stash the data locally for developing without
         // needing to hit the API each time.
-        //seed(JSON.stringify(data), `${__dirname}/../dev/sheet.json`);
+        seed(JSON.stringify(data), `${__dirname}/../dev/sheet.json`);
 
         // resolve the promise and return the data
         resolve(data);
