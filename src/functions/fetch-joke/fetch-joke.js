@@ -13,7 +13,7 @@ exports.handler = async function(event, context) {
 
     return {
       statusCode: 200,
-      body:  { msg: response }
+      body:  { msg: response.statusText }
     };
   } catch (err) {
     console.log(err); // output to netlify function log
