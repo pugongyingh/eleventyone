@@ -2,7 +2,7 @@
 const fetch = require("node-fetch");
 exports.handler = async function(event, context) {
   try {
-    const response = await fetch("https://icanhazdadjoke.com", {
+    const response = await fetch("http://bbc.co.uk/zhongwen/simp/", {
       headers: { Accept: "application/json" }
     });
     if (!response.ok) {
