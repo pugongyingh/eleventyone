@@ -11,7 +11,7 @@ const axios  = require('axios');
 const sheetID = "1CfI6XGm9OjjNKGr3kXRSKVLui_gkHZdadoOPIiNgE9s";
 const googleSheetUrl = `https://docs.google.com/spreadsheets/d/1_Xj3V6ovLEnK6u73PofcrJlG-XsgxBaQGK_wyUPXpYo/edit?usp=sharing`;
 
-module.exports = () => {
+exports.handler = async (event, context) => {
   return new Promise((resolve, reject) => {
 
     console.log(`Requesting data from ${googleSheetUrl}`);
