@@ -2,7 +2,7 @@
 const fetch = require("node-fetch");
 exports.handler = async function(event, context) {
   try {
-    const response = await fetch("http://bbc.co.uk/zhongwen/simp/", {
+    const response = await fetch("https://spreadsheets.google.com/feeds/list/1CfI6XGm9OjjNKGr3kXRSKVLui_gkHZdadoOPIiNgE9s/od6/public/values?alt=json", {
       headers: { Accept: "application/json" }
     });
     if (!response.ok) {
