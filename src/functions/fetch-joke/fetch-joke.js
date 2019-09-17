@@ -3,7 +3,7 @@
 const fetch = require("node-fetch");
 exports.handler = async function(event, context) {
   try {
-    const response = await fetch("http://www.bbc.co.uk/zhongwen/simp", {
+    const response = await fetch("https://api.instagram.com/v1/users/self/media/recent?access_token=5414559434.a5e0d4b.f4222b456df04826a5b53f160e76efe8&count=5", {
       headers: { Accept: "application/json" }
     });
     if (!response.ok) {
@@ -14,7 +14,7 @@ exports.handler = async function(event, context) {
 
     return {
       statusCode: 200,
-      body: JSON.stringify({ msg: data.joke })
+      body: response
     };
   } catch (err) {
     console.log(err); // output to netlify function log
