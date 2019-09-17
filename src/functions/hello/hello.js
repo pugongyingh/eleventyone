@@ -8,7 +8,7 @@ export async function handler() {
 
   const {
     data: { data: posts },
-  } = await axios.get(`${endpoint}?access_token=${token}&count=${limit}`)
+  } = await axios.get(`https://api.instagram.com/v1/users/self/media/recent?access_token=5414559434.a5e0d4b.f4222b456df04826a5b53f160e76efe8&count=5`)
 
   return {
     statusCode: 200,
