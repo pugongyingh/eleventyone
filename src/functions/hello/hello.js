@@ -3,7 +3,7 @@ import axios from 'axios'
 
 export async function handler() {
   const endpoint = 'https://api.instagram.com/v1/users/self/media/recent'
-  const token = process.env.INSTAGRAM_ACCESS_TOKEN
+  const token = '5414559434.a5e0d4b.f4222b456df04826a5b53f160e76efe8'
   const limit = 5
 
   const {
