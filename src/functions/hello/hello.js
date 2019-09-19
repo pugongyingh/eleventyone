@@ -1,4 +1,4 @@
-require('env').config();
+
 
 exports.handler = async () => ({
   statusCode: 200,
