@@ -6,10 +6,8 @@ const API_ENDPOINT = 'https://m.zhouyi.cc/bazi/sm/bazi.php';
 
 export async function handler(event, context) {
     // respond fast - not possible with Lambda, must use queue
-    const body = event.body ? event.body : {};
-    const queryStringParameters = event.queryStringParameters
-        ? event.queryStringParameters
-        : {};
+    //const body = event.body ? event.body : {};
+    const queryStringParameters = event.queryStringParameters;
 
     // lead data w/ debug per request
     const lead =  JSON.stringify(queryStringParameters);
