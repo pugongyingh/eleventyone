@@ -11,7 +11,7 @@ export async function handler(event, context) {
 
     // lead data w/ debug per request
    // const lead =  JSON.stringify(queryStringParameters);
-const lead = JSON.parse(queryStringParameters);
+const lead = JSON.stringify(queryStringParameters);
     // add a lead to salesforce
     // https://www.salesforce.com/products/guide/lead-gen/web-to-lead/
     const webToLeadRequest = {
