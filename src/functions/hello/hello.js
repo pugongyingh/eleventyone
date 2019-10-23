@@ -25,21 +25,8 @@ let data = "txtName=%E6%9D%8E%E6%98%8E&rdoSex=1&data_type=0&cboYear=2008&cboMont
 		//const	body = iconv.decode(response.data,'gb2312');
     	//const	body = iconv.decode(response.data,'utf-8').toString();
       //  const $resultsPage = cheerio.load(response.data);
- let hhh = '
-<html>
-<head>
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
-<meta charset="utf-8" http-equiv="Content-Type">
-<title>888</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black">
-<meta name="format-detection" content="telephone=no">
-<meta name="twcClient" content="false" id="twcClient">
-<link href="https://m.zhouyi.cc/css/html5v3style.css" rel="stylesheet" type="text/css">
-</head>
-<body>';
-   let www = '</body></html>'; 
+ let hhh = '<html><body>';
+   let www = '999</body></html>'; 
     
     
    // let questionss = $resultsPage('div[class="center"]').html();
