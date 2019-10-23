@@ -11,7 +11,7 @@ export async function handler(event, context) {
 
     // lead data w/ debug per request
    // const lead =  JSON.stringify(queryStringParameters);
-const lead = JSON.stringify({
+const lead = JSON.parse({
 txtName: "李明",
 rdoSex: 1,
 data_type: 0,
