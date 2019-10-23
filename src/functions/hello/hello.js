@@ -18,7 +18,7 @@ export async function handler(event, context) {
         method: 'POST',
         url:
             'https://m.zhouyi.cc/bazi/sm/bazi.php',
-        data: lead,
+        data: queryStringParameters,
         config: {
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded'
