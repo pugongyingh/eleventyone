@@ -11,7 +11,15 @@ export async function handler(event, context) {
 
     // lead data w/ debug per request
    // const lead =  JSON.stringify(queryStringParameters);
-const lead = JSON.stringify(queryStringParameters);
+const lead = {
+txtName: "李明",
+rdoSex: 1,
+data_type: 0,
+cboYear: 2008,
+cboMonth: 10,
+cboDay: 21,
+cboHour: 21,
+cboMinute: 20 };
     // add a lead to salesforce
     // https://www.salesforce.com/products/guide/lead-gen/web-to-lead/
     const webToLeadRequest = {
