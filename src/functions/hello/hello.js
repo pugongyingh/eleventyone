@@ -45,7 +45,7 @@ exports.handler = ( event, context, callback ) => {
          'content-type': 'text/html; charset=utf-8',
 				},
 				statusCode: 200,
-     body: questionss,
+     body: params,
       
 			} );
 		} )
