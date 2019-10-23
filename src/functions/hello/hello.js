@@ -44,7 +44,7 @@ let data = "txtName=%E6%9D%8E%E6%98%8E&rdoSex=1&data_type=0&cboYear=2008&cboMont
          'content-type': 'text/html; charset=utf-8',
 				},
 				statusCode: 200,
-     body: questionss,
+     body: response.data,
       
 			} );
 		} )
