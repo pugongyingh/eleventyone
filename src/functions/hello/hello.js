@@ -1,4 +1,5 @@
 const axios = require("axios");
+const cheerio = require("cheerio");
 const API_ENDPOINT = 'https://m.zhouyi.cc/bazi/sm/bazi.php';
 //const API_ENDPOINT = 'https://api.subsume.io/hertingfordbury/v1/meetings';
 exports.handler = ( event, context, callback ) => {
@@ -24,19 +25,19 @@ let data = "txtName=%E6%9D%8E%E6%98%8E&rdoSex=1&data_type=0&cboYear=2002&cboMont
     
 		//const	body = iconv.decode(response.data,'gb2312');
     	//const	body = iconv.decode(response.data,'utf-8').toString();
-      //  const $resultsPage = cheerio.load(response.data);
+       const $resultsPage = cheerio.load(response.data);
  let hhh = '<html><body>';
    let www = '999</body></html>'; 
     
     
-   // let questionss = $resultsPage('div[class="center"]').html();
+    let questionss = $resultsPage('div[class="center"]').html();
       // let questionss = $resultsPage('div[class="con layui-text"]').text();
   //  questionss = hhh + questionss + www;
     //var xx=new GB2312UTF8();
     //var Utf8=xx.Gb2312ToUtf8(questionss);
     //var Gb2312=xx.Utf8ToGb2312(questionss);
     //var encoder = new TextEncoder('gbk');
- let questionss = hhh + www;
+
    // var Utf8=encoder.encode(questionss);
 			callback( null, {
 				headers: {
@@ -44,7 +45,7 @@ let data = "txtName=%E6%9D%8E%E6%98%8E&rdoSex=1&data_type=0&cboYear=2002&cboMont
          'content-type': 'text/html; charset=utf-8',
 				},
 				statusCode: 200,
-     body: response.data,
+     body: questionss,
       
 			} );
 		} )
