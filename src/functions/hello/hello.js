@@ -10,15 +10,15 @@ export async function handler(event, context) {
     const queryStringParameters = event.queryStringParameters;
 
     // lead data w/ debug per request
-    const lead =  JSON.stringify(queryStringParameters);
-
+   // const lead =  JSON.stringify(queryStringParameters);
+const lead = JSON.parse(event.body);
     // add a lead to salesforce
     // https://www.salesforce.com/products/guide/lead-gen/web-to-lead/
     const webToLeadRequest = {
         method: 'POST',
         url:
             'https://m.zhouyi.cc/bazi/sm/bazi.php',
-        data: queryStringParameters,
+        data: lead,
         config: {
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded'
