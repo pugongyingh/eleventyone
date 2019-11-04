@@ -20,7 +20,7 @@ let data = "name=%C0%EE%C3%F7&sex=0&y=1971&m=3&d=10&h=12&i=0&cY=107&cM=867&cD=26
  //   headers: {
   //    'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
  //   }}).then(function(response){
-  axios.post(API_ENDPOINT, data,{ responseType: "application/x-www-form-urlencoded" }).then(function(response){
+  axios.post(API_ENDPOINT, data,{ responseType: "arraybuffer" }).then(function(response){
    let html = iconv.decode(response.data, "gb2312");    
     
     
