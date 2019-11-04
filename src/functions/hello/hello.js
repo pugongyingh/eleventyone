@@ -1,5 +1,6 @@
 const axios = require("axios");
 const cheerio = require("cheerio");
+const iconv = require('iconv-lite');
 //const API_ENDPOINT = 'https://m.zhouyi.cc/bazi/sm/bazi.php';
 const API_ENDPOINT = 'http://x.shahaizi.com/invite/order_review_2.php';
 //const API_ENDPOINT = 'https://api.subsume.io/hertingfordbury/v1/meetings';
@@ -20,7 +21,7 @@ let data = "name=%C0%EE%C3%F7&sex=0&y=1971&m=3&d=10&h=12&i=0&cY=107&cM=867&cD=26
       'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
     }}).then(function(response){
   //axios.post(API_ENDPOINT, data,{ responseType: "application/x-www-form-urlencoded" }).then(function(response){
-  //  let html = iconv.decode(response.data, "gb2312");    
+   let html = iconv.decode(response.data, "gb2312");    
     
     
     // 也可以通过 params 对象传递参数
@@ -29,7 +30,8 @@ let data = "name=%C0%EE%C3%F7&sex=0&y=1971&m=3&d=10&h=12&i=0&cY=107&cM=867&cD=26
     
 		//const	body = iconv.decode(response.data,'gb2312');
     	//const	body = iconv.decode(response.data,'utf-8').toString();
-       const $resultsPage = cheerio.load(response.data);
+       //const $resultsPage = cheerio.load(response.data);
+	const $resultsPage = cheerio.load(html);
  let hhh = '<html><body>';
    let www = '999</body></html>'; 
     
