@@ -39,7 +39,6 @@ let data = "name=%C0%EE%C3%F7&sex=0&y=1971&m=3&d=10&h=12&i=0&cY=107&cM=867&cD=26
 <meta name="keywords" content="生辰八字算命，免费八字算命网，最准的生辰八字算命，八字算命最准的网站，农历生辰八字算命网">
 <meta name="description" content="免费八字算命网，算命最准的网站，根据周易算命的方法，为您进行最准的生辰八字算命，内容包括：生辰八字算命，八字算命婚姻，四柱八字算命，批八字算命，时辰八字算命，三世书查婚姻，三世书算命，三世书测财运，三命通会、穷通宝鉴调候用神参考、六十甲子日柱论命、滴天髓、流年运势分析等内容！">
 <link href="http://x.shahaizi.com/invite/css/module_bazi_review_1.css" rel="stylesheet" type="text/css">
-<script src="js/base_global.js" type="text/javascript"></script>
 </head>
 <body>';
    let www = '</body></html>'; 
