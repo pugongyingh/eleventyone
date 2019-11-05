@@ -43,8 +43,8 @@ $resultsPage('div[class="suanming_s"]').children().each(function(i, elem) {
 //fruits.join(', ');
 //=> Apple, Orange, Pear
     
-    let questionss = $resultsPage('div[class="suanming_s"]').find('suanming_c_1').html();
-	
+    //let questionss = $resultsPage('div[class="suanming_s"]').find('suanming_c_1').html();
+	 let questionss = $resultsPage('div[class="suanming_s"]').children().slice(1,3);
       // let questionss = $resultsPage('div[class="con layui-text"]').text();
   //  questionss = hhh + questionss + www;
     //var xx=new GB2312UTF8();
@@ -59,7 +59,7 @@ $resultsPage('div[class="suanming_s"]').children().each(function(i, elem) {
         // 'content-type': 'text/html; charset=utf-8',
 				},
 				statusCode: 200,
-     body: fruits,
+     body: questionss,
       
 			} );
 		} )
