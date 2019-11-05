@@ -71,7 +71,7 @@ let data = "name=%C0%EE%C3%F7&sex=0&y=1971&m=3&d=10&h=12&i=0&cY=107&cM=867&cD=26
 	  questionss = questionss + qqqq.slice(14).html();
 	  questionss = questionss + qqqq.slice(15).html();
 	  questionss = questionss + qqqq.slice(16).html();
-	questionss = hhh +  "questionss" + www;
+	
 
 
 
