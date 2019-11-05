@@ -1,5 +1,5 @@
 
-/*全局样式*/
+
 * {
 	margin:0;
 	padding:0;
@@ -22,7 +22,7 @@ div,form,img,ul,ol,li,dl,dt,dd {margin: 0; padding: 0; border: 0; list-style:non
 	font-size:16px;
 	padding:3px 15px;
 }
-/*全局样式*/
+
 .suanming{
 	width:862px;
 	margin:0 auto;
