@@ -44,7 +44,7 @@ let data = "name=%C0%EE%C3%F7&sex=0&y=1971&m=3&d=10&h=12&i=0&cY=107&cM=867&cD=26
 //=> Apple, Orange, Pear
     
     //let questionss = $resultsPage('div[class="suanming_s"]').find('suanming_c_1').html();
-      let questionss = $resultsPage('div[class="suanming_s"]').children('div[class="suanming_c_1"]').removeClass('div[class="c_2_title"]').html();
+      let questionss = $resultsPage('div[class="suanming_s"]').children('div[class="suanming_c_1"]').slice(0).removeClass('c_2_title').html();
 	  
 	  questionss = questionss + $resultsPage('div[class="suanming_s"]').children('div[class="suanming_c_1"]').slice(1).html();
 	  questionss = questionss + $resultsPage('div[class="suanming_s"]').children('div[class="suanming_c_1"]').slice(2).html();
