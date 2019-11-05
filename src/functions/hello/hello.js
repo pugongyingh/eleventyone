@@ -45,23 +45,25 @@ let data = "name=%C0%EE%C3%F7&sex=0&y=1971&m=3&d=10&h=12&i=0&cY=107&cM=867&cD=26
     
     //let questionss = $resultsPage('div[class="suanming_s"]').find('suanming_c_1').html();
      // let questionss = $resultsPage('div[class="suanming_s"]').children('div[class="suanming_c_1"]').removeClass("c_2_title").html();
-	let qqqq = $resultsPage('div[class="suanming_s"]').children('div[class="suanming_c_1"]');  
-	  let questionss = qqqq.slice(1).html();
-	  questionss = questionss + $resultsPage('div[class="suanming_s"]').children('div[class="suanming_c_1"]').slice(2).html();
-	  questionss = questionss + $resultsPage('div[class="suanming_s"]').children('div[class="suanming_c_1"]').slice(3).html();
-	  questionss = questionss + $resultsPage('div[class="suanming_s"]').children('div[class="suanming_c_1"]').slice(4).html();
-	  questionss = questionss + $resultsPage('div[class="suanming_s"]').children('div[class="suanming_c_1"]').slice(5).html();
-	  questionss = questionss + $resultsPage('div[class="suanming_s"]').children('div[class="suanming_c_1"]').slice(6).html();
-	  questionss = questionss + $resultsPage('div[class="suanming_s"]').children('div[class="suanming_c_1"]').slice(7).html();
-	  questionss = questionss + $resultsPage('div[class="suanming_s"]').children('div[class="suanming_c_1"]').slice(8).html();
-	  questionss = questionss + $resultsPage('div[class="suanming_s"]').children('div[class="suanming_c_1"]').slice(9).html();
-	  questionss = questionss + $resultsPage('div[class="suanming_s"]').children('div[class="suanming_c_1"]').slice(10).html();
-	  questionss = questionss + $resultsPage('div[class="suanming_s"]').children('div[class="suanming_c_1"]').slice(11).html();
-	  questionss = questionss + $resultsPage('div[class="suanming_s"]').children('div[class="suanming_c_1"]').slice(12).html();
-	  questionss = questionss + $resultsPage('div[class="suanming_s"]').children('div[class="suanming_c_1"]').slice(13).html();
-	  questionss = questionss + $resultsPage('div[class="suanming_s"]').children('div[class="suanming_c_1"]').slice(14).html();
-	  questionss = questionss + $resultsPage('div[class="suanming_s"]').children('div[class="suanming_c_1"]').slice(15).html();
-	  questionss = questionss + $resultsPage('div[class="suanming_s"]').children('div[class="suanming_c_1"]').slice(16).html();
+	
+	  let qqqq = $resultsPage('div[class="suanming_s"]').children('div[class="suanming_c_1"]'); 
+	  let quuu = qqqq.('div[class="c_2_title"]').html();
+	  let questionss = quuu  + qqqq.slice(1).html();
+	  questionss = questionss + qqqq.slice(2).html();
+	  questionss = questionss + qqqq.slice(3).html();
+	  questionss = questionss + qqqq.slice(4).html();
+	  questionss = questionss + qqqq.slice(5).html();
+	  questionss = questionss + qqqq.slice(6).html();
+	  questionss = questionss + qqqq.slice(7).html();
+	  questionss = questionss + qqqq.slice(8).html();
+	  questionss = questionss + qqqq.slice(9).html();
+	  questionss = questionss + qqqq.slice(10).html();
+	  questionss = questionss + qqqq.slice(11).html();
+	  questionss = questionss + qqqq.slice(12).html();
+	  questionss = questionss + qqqq.slice(13).html();
+	  questionss = questionss + qqqq.slice(14).html();
+	  questionss = questionss + qqqq.slice(15).html();
+	  questionss = questionss + qqqq.slice(16).html();
 	
 
 
