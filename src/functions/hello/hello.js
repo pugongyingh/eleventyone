@@ -36,7 +36,7 @@ let data = "name=%C0%EE%C3%F7&sex=0&y=1971&m=3&d=10&h=12&i=0&cY=107&cM=867&cD=26
    let www = '999</body></html>'; 
     
     
-    let questionss = $resultsPage('div[class="suanming_c_1"]').html();
+    let questionss = $resultsPage('div[class="suanming_c_1"]').nextAll().html();
       // let questionss = $resultsPage('div[class="con layui-text"]').text();
   //  questionss = hhh + questionss + www;
     //var xx=new GB2312UTF8();
