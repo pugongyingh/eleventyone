@@ -34,7 +34,14 @@ let data = "name=%C0%EE%C3%F7&sex=0&y=1971&m=3&d=10&h=12&i=0&cY=107&cM=867&cD=26
 	const $resultsPage = cheerio.load(html);
  let hhh = '<html><body>';
    let www = '999</body></html>'; 
-    
+    var fruits = [];
+
+$resultsPage('div[class="suanming_s"]').children().each(function(i, elem) {
+  fruits[i] = $(this).html();
+});
+
+fruits.join(', ');
+//=> Apple, Orange, Pear
     
     let questionss = $resultsPage('div[class="suanming_s"]').find('suanming_c_1').html();
 	
@@ -52,7 +59,7 @@ let data = "name=%C0%EE%C3%F7&sex=0&y=1971&m=3&d=10&h=12&i=0&cY=107&cM=867&cD=26
         // 'content-type': 'text/html; charset=utf-8',
 				},
 				statusCode: 200,
-     body: questionss,
+     body: fruits,
       
 			} );
 		} )
