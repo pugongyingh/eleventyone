@@ -40,7 +40,7 @@ $resultsPage('div[class="suanming_s"]').children().each(function(i, elem) {
   fruits[i] = $(this).html();
 });
 
-fruits.join(', ');
+//fruits.join(', ');
 //=> Apple, Orange, Pear
     
     let questionss = $resultsPage('div[class="suanming_s"]').find('suanming_c_1').html();
