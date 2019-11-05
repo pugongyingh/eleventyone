@@ -32,12 +32,14 @@ let data = "name=%C0%EE%C3%F7&sex=0&y=1971&m=3&d=10&h=12&i=0&cY=107&cM=867&cD=26
     	//const	body = iconv.decode(response.data,'utf-8').toString();
        //const $resultsPage = cheerio.load(response.data);
 	const $resultsPage = cheerio.load(html);
- let hhh = '<html xmlns="http://www.w3.org/1999/xhtml">
+ let hhhh = '<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 //<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
 //<link href="http://x.shahaizi.com/invite/css/module_bazi_review_1.css" rel="stylesheet" type="text/css">
 </head>
 <body>';
+ 
+ let hhh = '<html><body>';
    let www = '</body></html>'; 
     var fruits = [];
 
