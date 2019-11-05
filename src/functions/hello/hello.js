@@ -49,6 +49,26 @@ let data = "name=%C0%EE%C3%F7&sex=0&y=1971&m=3&d=10&h=12&i=0&cY=107&cM=867&cD=26
 	  questionss = questionss + $resultsPage('div[class="suanming_s"]').children('div[class="suanming_c_1"]').slice(2).html();
 	  questionss = questionss + $resultsPage('div[class="suanming_s"]').children('div[class="suanming_c_1"]').slice(3).html();
 	  questionss = questionss + $resultsPage('div[class="suanming_s"]').children('div[class="suanming_c_1"]').slice(4).html();
+	  questionss = questionss + $resultsPage('div[class="suanming_s"]').children('div[class="suanming_c_1"]').slice(5).html();
+	  questionss = questionss + $resultsPage('div[class="suanming_s"]').children('div[class="suanming_c_1"]').slice(6).html();
+	  questionss = questionss + $resultsPage('div[class="suanming_s"]').children('div[class="suanming_c_1"]').slice(7).html();
+	  questionss = questionss + $resultsPage('div[class="suanming_s"]').children('div[class="suanming_c_1"]').slice(8).html();
+	  questionss = questionss + $resultsPage('div[class="suanming_s"]').children('div[class="suanming_c_1"]').slice(9).html();
+	  questionss = questionss + $resultsPage('div[class="suanming_s"]').children('div[class="suanming_c_1"]').slice(10).html();
+	  questionss = questionss + $resultsPage('div[class="suanming_s"]').children('div[class="suanming_c_1"]').slice(11).html();
+	  questionss = questionss + $resultsPage('div[class="suanming_s"]').children('div[class="suanming_c_1"]').slice(12).html();
+	  questionss = questionss + $resultsPage('div[class="suanming_s"]').children('div[class="suanming_c_1"]').slice(13).html();
+	  questionss = questionss + $resultsPage('div[class="suanming_s"]').children('div[class="suanming_c_1"]').slice(14).html();
+	  questionss = questionss + $resultsPage('div[class="suanming_s"]').children('div[class="suanming_c_1"]').slice(15).html();
+	  questionss = questionss + $resultsPage('div[class="suanming_s"]').children('div[class="suanming_c_1"]').slice(16).html();
+	  questionss = questionss + $resultsPage('div[class="suanming_s"]').children('div[class="suanming_c_1"]').slice(17).html();
+	  questionss = questionss + $resultsPage('div[class="suanming_s"]').children('div[class="suanming_c_1"]').slice(18).html();
+	  questionss = questionss + $resultsPage('div[class="suanming_s"]').children('div[class="suanming_c_1"]').slice(19).html();
+	  questionss = questionss + $resultsPage('div[class="suanming_s"]').children('div[class="suanming_c_1"]').slice(20).html();
+	  questionss = questionss + $resultsPage('div[class="suanming_s"]').children('div[class="suanming_c_1"]').slice(21).html();
+	  questionss = questionss + $resultsPage('div[class="suanming_s"]').children('div[class="suanming_c_1"]').slice(22).html();
+
+	  	  	  
       // let questionss = $resultsPage('div[class="con layui-text"]').text();
   //  questionss = hhh + questionss + www;
     //var xx=new GB2312UTF8();
