@@ -52,7 +52,7 @@ let data = "name=%C0%EE%C3%F7&sex=0&y=1971&m=3&d=10&h=12&i=0&cY=107&cM=867&cD=26
 	  let quuu = qqqq.slice(0).children('.c_1_text').html();
 	  const $r88 = cheerio.load(qqqq.slice(1).html());
 	  $r88('table').empty();
-	  let questionss = quuu + $r88.html();
+	  let questionss = quuu + "888</div>"  + $r88.html();
 	  questionss = questionss + qqqq.slice(2).html();
 	  questionss = questionss + qqqq.slice(3).html();
 	  questionss = questionss + qqqq.slice(4).html();
