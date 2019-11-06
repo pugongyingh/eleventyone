@@ -50,7 +50,9 @@ let data = "name=%C0%EE%C3%F7&sex=0&y=1971&m=3&d=10&h=12&i=0&cY=107&cM=867&cD=26
 	
 	  let qqqq = $resultsPage('div[class="suanming_s"]').children('div[class="suanming_c_1"]'); 
 	  let quuu = qqqq.slice(0).children('.c_1_text').html();
-	  let questionss = quuu + qqqq.slice(1).html();
+	  const $r88 = cheerio.load(qqqq.slice(1).html());
+	  $r88('table').empty();
+	  let questionss = quuu + $r88.html();
 	  questionss = questionss + qqqq.slice(2).html();
 	  questionss = questionss + qqqq.slice(3).html();
 	  questionss = questionss + qqqq.slice(4).html();
@@ -68,10 +70,7 @@ let data = "name=%C0%EE%C3%F7&sex=0&y=1971&m=3&d=10&h=12&i=0&cY=107&cM=867&cD=26
 	  questionss = questionss + qqqq.slice(16).html();
 	
 questionss = hhh + questionss + www;
-const $r88 = cheerio.load(qqqq.slice(1).html());
-	  $r88('table').empty();
-	   let questionss88 =$r88.html();
-	  	questionss88 = hhh + questionss88 + www;  	  
+ 	  
       // let questionss = $resultsPage('div[class="con layui-text"]').text();
   //  questionss = hhh + questionss + www;
     //var xx=new GB2312UTF8();
@@ -86,7 +85,7 @@ const $r88 = cheerio.load(qqqq.slice(1).html());
         // 'content-type': 'text/html; charset=utf-8',
 				},
 				statusCode: 200,
-     body: questionss88,
+     body: questionss,
       
 			} );
 		} )
