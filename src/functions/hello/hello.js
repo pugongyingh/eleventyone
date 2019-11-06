@@ -35,7 +35,7 @@ let data = "name=%C0%EE%C3%F7&sex=0&y=1971&m=3&d=10&h=12&i=0&cY=107&cM=867&cD=26
 
  
  let hhh = '<html><head><link href="https://sharp-almeida-02bb5b.netlify.com/ttt.css" rel="stylesheet" type="text/css"></head><body><div class="app"><div class="subs_2"><div class="c_1_title"><strong>1975</strong></div><div class="c_1_text">';
-   let www = '</body></html>'; 
+   let www = '</div></div></body></html>'; 
     var fruits = [];
 
 //$resultsPage('div[class="suanming_s"]').children().each(function(i, elem) {
