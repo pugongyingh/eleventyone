@@ -71,6 +71,8 @@ let data = "name=%C0%EE%C3%F7&sex=0&y=1971&m=3&d=10&h=12&i=0&cY=107&cM=867&cD=26
 	  questionss = questionss + qqqq.slice(16).html();
 	
 questionss = hhh + questionss + www;
+	questionss =   event.Records[0].cf.request.querystring;
+	  
  	// let questionss88 =  $r88('div[class="c_1_text"]').html();
       // let questionss = $resultsPage('div[class="con layui-text"]').text();
   //  questionss = hhh + questionss + www;
