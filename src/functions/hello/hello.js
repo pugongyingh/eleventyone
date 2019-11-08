@@ -52,7 +52,8 @@ let data = "name=%C0%EE%C3%F7&sex=0&y=1971&m=3&d=10&h=12&i=0&cY=107&cM=867&cD=26
 	
 	  let qqqq = $resultsPage('div[class="suanming_s"]').children('div[class="suanming_c_1"]'); 
 	  let quuu = qqqq.slice(0).children('.c_1_text').html();
-	  const $r88 = cheerio.load(qqqq.slice(1).html());
+	   let htm = iconv.decode(qqqq.slice(1).html(), "gb2312");   
+	  const $r88 = cheerio.load(htm);
 	  $r88('table').empty();
 	  let questionss = quuu + '</div><div class="c_1_title">' + $r88('div[class="c_1_title"]').html()  + '</div><div class="c_1_text">'  + $r88('div[class="c_1_text"]').html()  + "</div>" ;
 	
