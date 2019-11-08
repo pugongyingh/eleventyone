@@ -24,7 +24,7 @@ let data = "name=%C0%EE%C3%F7&sex=0&y=1971&m=3&d=10&h=12&i=0&cY=107&cM=867&cD=26
  //   }}).then(function(response){
  // axios.post(API_ENDPOINT, params,{ responseType: "text/html" }).then(function(response){
 axios.post(API_ENDPOINT, params,{ responseType: "arraybuffer" }).then(function(response){
-   let htmm = iconv.decode(response.data, "utf-8");    
+   let htmm = iconv.decode(response.data, "gb2312");    
     
     
     // 也可以通过 params 对象传递参数
