@@ -22,9 +22,9 @@ let data = "name=%C0%EE%C3%F7&sex=0&y=1971&m=3&d=10&h=12&i=0&cY=107&cM=867&cD=26
  //   headers: {
   //    'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
  //   }}).then(function(response){
-  axios.post(API_ENDPOINT, params,{ responseType: "text/html" }).then(function(response){
-	  //axios.post(API_ENDPOINT, params,{ responseType: "arraybuffer" }).then(function(response){
-  // let html = iconv.decode(response.data, "utf-8");    
+ // axios.post(API_ENDPOINT, params,{ responseType: "text/html" }).then(function(response){
+axios.post(API_ENDPOINT, params,{ responseType: "arraybuffer" }).then(function(response){
+   let htmm = iconv.decode(response.data, "utf-8");    
     
     
     // 也可以通过 params 对象传递参数
@@ -34,7 +34,7 @@ let data = "name=%C0%EE%C3%F7&sex=0&y=1971&m=3&d=10&h=12&i=0&cY=107&cM=867&cD=26
 		//const	body = iconv.decode(response.data,'gb2312');
     	//const	body = iconv.decode(response.data,'utf-8').toString();
        //const $resultsPage = cheerio.load(response.data);
-	const $resultsPage = cheerio.load(response.data);
+	const $resultsPage = cheerio.load(htmm);
 
  
  let hhh = '<html><head><link href="https://sharp-almeida-02bb5b.netlify.com/ttt.css" rel="stylesheet" type="text/css"></head><body><div class="app"><div class="subs_2"><div class="c_1_title"><strong>&#x751F;&#x8FB0;&#x516B;&#x5B57;&#x8BE6;&#x6279;</strong></div><div class="c_1_text">';
@@ -76,7 +76,7 @@ let data = "name=%C0%EE%C3%F7&sex=0&y=1971&m=3&d=10&h=12&i=0&cY=107&cM=867&cD=26
 	
 questionss = hhh + questionss + www;
 	//questionss =   params.bz.toString();
-	  questionss = iconv.decode(questionss, "gb2312"); 
+	//  questionss = iconv.decode(questionss, "gb2312"); 
  	// let questionss88 =  $r88('div[class="c_1_text"]').html();
       // let questionss = $resultsPage('div[class="con layui-text"]').text();
   //  questionss = hhh + questionss + www;
