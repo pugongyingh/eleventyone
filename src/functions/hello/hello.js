@@ -23,7 +23,7 @@ let data = "name=%C0%EE%C3%F7&sex=0&y=1971&m=3&d=10&h=12&i=0&cY=107&cM=867&cD=26
   //    'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
  //   }}).then(function(response){
   axios.post(API_ENDPOINT, params,{ responseType: "arraybuffer" }).then(function(response){
-   let html = iconv.decode(response.data, "gb2312");    
+   let html = iconv.decode(response.data, "utf-8");    
     
     
     // 也可以通过 params 对象传递参数
@@ -54,7 +54,7 @@ let data = "name=%C0%EE%C3%F7&sex=0&y=1971&m=3&d=10&h=12&i=0&cY=107&cM=867&cD=26
 	  let quuu = qqqq.slice(0).children('.c_1_text').html();
 	     
 	  const $r88 = cheerio.load(qqqq.slice(1).html());
-	  //$r88('table').empty();
+	  $r88('table').empty();
 	  let questionss = quuu + '</div><div class="c_1_title">' + $r88('div[class="c_1_title"]').html()  + '</div><div class="c_1_text">'  + $r88('div[class="c_1_text"]').html()  + "</div>" ;
 	
 	  questionss = questionss + qqqq.slice(2).html();
