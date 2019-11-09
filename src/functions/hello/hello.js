@@ -54,8 +54,8 @@ var html = iconv.decode(response.data, 'gb2312'); //return unicode string from G
 	//  let quuu = qqqq.slice(0).children('.c_1_text').html();
 	 let   qqqqq = cheerio.load($resultsPage.html());
 	
-	
-questionss = hhh + qqqqq.html() + www;
+	 let quuu = qqqqq.slice(0).children('.c_1_text').html();
+questionss = hhh + quuu + www;
  	// let questionss88 =  $r88('div[class="c_1_text"]').html();
       // let questionss = $resultsPage('div[class="con layui-text"]').text();
   //  questionss = hhh + questionss + www;
