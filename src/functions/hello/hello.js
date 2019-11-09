@@ -154,7 +154,7 @@ function GB2312UTF8(){
       var xx=new GB2312UTF8();
   
   
-  var htmm=xx.Gb2312ToUtf8(response.data);
+  var htmm=xx.Utf8ToGb2312(response.data);
 
     
     // 也可以通过 params 对象传递参数
@@ -179,7 +179,7 @@ function GB2312UTF8(){
         // 'content-type': 'text/html; charset=utf-8',
 				},
 				statusCode: 200,
-     body: response.data,
+     body: htmm,
       
 			} );
 		} )
