@@ -51,7 +51,7 @@ var html = iconv.decode(response.data, 'gb2312'); //return unicode string from G
     //let questionss = $resultsPage('div[class="suanming_s"]').find('suanming_c_1').html();
      // let questionss = $resultsPage('div[class="suanming_s"]').children('div[class="suanming_c_1"]').removeClass("c_2_title").html();
 	  let qqqq = $resultsPage('div[class="suanming_s"]').children('div[class="suanming_c_1"]'); 
-	  let quuu = qqqq.slice(0).children('.c_1_text').html();
+	//  let quuu = qqqq.slice(0).children('.c_1_text').html();
 	  qqqq = cheerio.load(qqqq.html());
 	
 	
