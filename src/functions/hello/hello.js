@@ -22,7 +22,7 @@ let params = qs.stringify(event.queryStringParameters);
  //   headers: {
   //    'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
  //   }}).then(function(response){
-  axios.post(API_ENDPOINT, ${params},{ responseType: "arraybuffer" }).then(function(response){
+  axios.post(API_ENDPOINT, params,{ responseType: "arraybuffer" }).then(function(response){
       
 var html = iconv.decode(response.data, 'gb2312'); //return unicode string from GBK encoded bytes
 
