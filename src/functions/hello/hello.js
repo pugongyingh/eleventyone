@@ -51,13 +51,13 @@ var html = iconv.decode(response.data, 'gb2312'); //return unicode string from G
     //let questionss = $resultsPage('div[class="suanming_s"]').find('suanming_c_1').html();
      // let questionss = $resultsPage('div[class="suanming_s"]').children('div[class="suanming_c_1"]').removeClass("c_2_title").html();
 	  let qqqq = $resultsPage('div[class="suanming_s"]').children('div[class="suanming_c_1"]'); 
-	  
-	  let quuu = cheerio.load(qqqq.slice(0).children('.c_1_text'));
-	  const $r88 = cheerio.load(qqqq.html());
+	  qqqq = cheerio.load(qqqq.html());
+	  let quuu = qqqq.slice(0).children('.c_1_text');
+	  const $r88 = qqqq.slice(1).html()
 	  $r88('table').empty();
 	  let questionss = quuu + '</div><div class="c_1_title">' + $r88('div[class="c_1_title"]').html()  + '</div><div class="c_1_text">'  + $r88('div[class="c_1_text"]').html()  + "</div>" ;
 	
-	  questionss = questionss + cheerio.load(qqqq.slice(2).html());
+	  questionss = questionss + qqqq.slice(2).html();
 	  questionss = questionss + qqqq.slice(3).html();
 	  questionss = questionss + qqqq.slice(4).html();
 	  questionss = questionss + qqqq.slice(5).html();
