@@ -148,8 +148,8 @@ function GB2312UTF8(){
  //   headers: {
   //    'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
  //   }}).then(function(response){
- // axios.post(API_ENDPOINT, params,{ responseType: "text/html" }).then(function(response){
-axios.post(API_ENDPOINT, params,{ responseType: "arraybuffer" }).then(function(response){
+  axios.post(API_ENDPOINT, params,{ responseType: "text/html" }).then(function(response){
+//axios.post(API_ENDPOINT, params,{ responseType: "arraybuffer" }).then(function(response){
   // let htmm = iconv.decode(response.data, "gb2312");    
       var xx=new GB2312UTF8();
   
