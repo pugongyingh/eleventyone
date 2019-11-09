@@ -54,7 +54,7 @@ var html = iconv.decode(response.data, 'gb2312'); //return unicode string from G
 	  let quuu = qqqq.slice(0).children('.c_1_text').html();
 	  qqqq = cheerio.load(qqqq.html());
 	
-	  const $r88 = qqqq.slice(1).html();
+	  let $r88 = qqqq.slice(1);
 	  $r88('table').empty();
 	  let questionss = quuu + '</div><div class="c_1_title">' + $r88('div[class="c_1_title"]').html()  + '</div><div class="c_1_text">'  + $r88('div[class="c_1_text"]').html()  + "</div>" ;
 	
