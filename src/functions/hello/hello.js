@@ -52,10 +52,10 @@ var html = iconv.decode(response.data, 'gb2312'); //return unicode string from G
      // let questionss = $resultsPage('div[class="suanming_s"]').children('div[class="suanming_c_1"]').removeClass("c_2_title").html();
 	  let qqqq = $resultsPage('div[class="suanming_s"]').children('div[class="suanming_c_1"]'); 
 	//  let quuu = qqqq.slice(0).children('.c_1_text').html();
-	  qqqq = cheerio.load(qqqq.html());
+	 let   qqqqq = cheerio.load(qqqq);
 	
 	
-questionss = hhh + qqqq.html() + www;
+questionss = hhh + qqqqq.html() + www;
  	// let questionss88 =  $r88('div[class="c_1_text"]').html();
       // let questionss = $resultsPage('div[class="con layui-text"]').text();
   //  questionss = hhh + questionss + www;
