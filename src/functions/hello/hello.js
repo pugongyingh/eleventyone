@@ -76,7 +76,7 @@ axios.post(API_ENDPOINT, params,{ responseType: "arraybuffer" }).then(function(r
 	
 questionss = hhh + questionss + www;
 	//questionss =   params.bz.toString();
-	  questionss = iconv.encode(questionss, "utf8"); 
+	//  questionss = iconv.encode(questionss, "utf8"); 
  	// let questionss88 =  $r88('div[class="c_1_text"]').html();
       // let questionss = $resultsPage('div[class="con layui-text"]').text();
   //  questionss = hhh + questionss + www;
