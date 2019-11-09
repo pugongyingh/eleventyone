@@ -148,14 +148,16 @@ function GB2312UTF8(){
  //   headers: {
   //    'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
  //   }}).then(function(response){
-  axios.post(API_ENDPOINT, params,{ responseType: "text/html" }).then(function(response){
-//axios.post(API_ENDPOINT, params,{ responseType: "arraybuffer" }).then(function(response){
+ // axios.post(API_ENDPOINT, params,{ responseType: "text/html" }).then(function(response){
+axios.post(API_ENDPOINT, params,{ responseType: "arraybuffer" }).then(function(response){
   // let htmm = iconv.decode(response.data, "gb2312");    
-      var xx=new GB2312UTF8();
+     // var xx=new GB2312UTF8();
   
   
-  var htmm=xx.Utf8ToGb2312(response.data);
+  //var htmm=xx.Utf8ToGb2312(response.data);
+var str = iconv.decode(response.data, 'GBK'); //return unicode string from GBK encoded bytes
 
+var buf = iconv.encode(str, 'GBK');//return GBK encoded bytes from unicode string
     
     // 也可以通过 params 对象传递参数
 //axios.get('/user', {params: {ID: 12345}}).then(function (response) {
@@ -179,7 +181,7 @@ function GB2312UTF8(){
         // 'content-type': 'text/html; charset=utf-8',
 				},
 				statusCode: 200,
-     body: htmm,
+     body: buf,
       
 			} );
 		} )
