@@ -23,9 +23,9 @@ let data = "name=%C0%EE%C3%F7&sex=0&y=1971&m=3&d=10&h=12&i=0&cY=107&cM=867&cD=26
  //   }}).then(function(response){
   axios.post(API_ENDPOINT, data,{ responseType: "arraybuffer" }).then(function(response){
       
-var str = iconv.decode(response.data, 'GBK'); //return unicode string from GBK encoded bytes
+var str = iconv.decode(response.data, 'gb2312'); //return unicode string from GBK encoded bytes
 
-var html = iconv.encode(str, 'GBK');//return GBK encoded bytes from unicode string    
+var html = iconv.encode(str, 'gb2312');//return GBK encoded bytes from unicode string    
     
     // 也可以通过 params 对象传递参数
 //axios.get('/user', {params: {ID: 12345}}).then(function (response) {
