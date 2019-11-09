@@ -52,7 +52,26 @@ var html = iconv.decode(response.data, 'gb2312'); //return unicode string from G
      // let questionss = $resultsPage('div[class="suanming_s"]').children('div[class="suanming_c_1"]').removeClass("c_2_title").html();
 	
 	  let qqqq = $resultsPage('div[class="suanming_s"]').children('div[class="suanming_c_1"]'); 
-	 qqqq =  cheerio.load(qqqq.html());
+	  let quuu = qqqq.slice(0).children('.c_1_text').html();
+	  const $r88 = cheerio.load(qqqq.slice(1).html());
+	  $r88('table').empty();
+	  let questionss = quuu + '</div><div class="c_1_title">' + $r88('div[class="c_1_title"]').html()  + '</div><div class="c_1_text">'  + $r88('div[class="c_1_text"]').html()  + "</div>" ;
+	
+	  questionss = questionss + qqqq.slice(2).html();
+	  questionss = questionss + qqqq.slice(3).html();
+	  questionss = questionss + qqqq.slice(4).html();
+	  questionss = questionss + qqqq.slice(5).html();
+	  questionss = questionss + qqqq.slice(6).html();
+	  questionss = questionss + qqqq.slice(7).html();
+	  questionss = questionss + qqqq.slice(8).html();
+	  questionss = questionss + qqqq.slice(9).html();
+	  questionss = questionss + qqqq.slice(10).html();
+	  questionss = questionss + qqqq.slice(11).html();
+	  questionss = questionss + qqqq.slice(12).html();
+	  questionss = questionss + qqqq.slice(13).html();
+	  questionss = questionss + qqqq.slice(14).html();
+	  questionss = questionss + qqqq.slice(15).html();
+	  questionss = questionss + qqqq.slice(16).html();
 
 	
 questionss = hhh + qqqq + www;
