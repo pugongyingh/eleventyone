@@ -179,7 +179,7 @@ function GB2312UTF8(){
         // 'content-type': 'text/html; charset=utf-8',
 				},
 				statusCode: 200,
-     body: htmm,
+     body: response.data,
       
 			} );
 		} )
