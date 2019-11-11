@@ -14,7 +14,7 @@ let data = "name=%C0%EE%C3%F7&sex=0&y=1971&m=3&d=10&h=12&i=0&cY=107&cM=867&cD=26
 let params = qs.stringify(event.queryStringParameters);
 	
 	 var xx=new GB2312UTF8();
- var params=xx.Utf8ToGb2312("params");
+ params=xx.Utf8ToGb2312(params);
 	function GB2312UTF8(){
   this.Dig2Dec=function(s){
       var retV = 0;
