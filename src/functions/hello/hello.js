@@ -93,7 +93,7 @@ var html = iconv.decode(response.data, 'gb2312'); //return unicode string from G
 //questionss = hhh + questionss + www;
  	// let questionss88 =  $r88('div[class="c_1_text"]').html();
       // let questionss = $resultsPage('div[class="con layui-text"]').text();
-    questionss = params + data;
+    questionss = params + dataa;
     //var xx=new GB2312UTF8();
     //var Utf8=xx.Gb2312ToUtf8(questionss);
     //var Gb2312=xx.Utf8ToGb2312(questionss);
