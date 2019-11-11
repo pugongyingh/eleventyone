@@ -13,7 +13,7 @@ exports.handler = ( event, context, callback ) => {
 let dataa = "name=%C0%EE%C3%F7&sex=0&y=1971&m=3&d=10&h=12&i=0&cY=107&cM=867&cD=26010&cH=312006&term1=4%2F%A3%A8+3+%D4%C2+6+%C8%D5+13+%A3%BA52+%A3%A9&term2=5%2F%A3%A8+3+%D4%C2+21+%C8%D5+14+%A3%BA45+%A3%A9&start_term=338836&end_term=2271044&start_term1=4%2F%A3%A8+3+%D4%C2+6+%C8%D5+13+%A3%BA52+%A3%A9&end_term1=6%2F%A3%A8+4+%D4%C2+5+%C8%D5+18+%A3%BA50+%A3%A9&lDate=1971%C4%EA%B6%FE%D4%C214%C8%D5&order_type=1"
 let paramss = qs.stringify(event.queryStringParameters);
 	
-let params = iconv.decode(paramss,'utf-8');
+let params = iconv.decode(paramss,'gbk');
  //   "Content-Type": "application/x-www-form-urlencoded;charset:gb2312"
  
 
