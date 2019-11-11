@@ -20,7 +20,7 @@ let params = qs.stringify(event.queryStringParameters);
   axios(API_ENDPOINT, {
     method: "post",
     headers: {
-      "Content-Type": "application/x-www-form-urlencoded;charset:gb2312"
+      "Content-Type": "application/x-www-form-urlencoded"
     },
     data:params,
     responseType: "arraybuffer"
