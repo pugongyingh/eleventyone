@@ -16,10 +16,12 @@ let data = "name=%C0%EE%C3%F7&sex=0&y=1971&m=3&d=10&h=12&i=0&cY=107&cM=867&cD=26
 	Axios({
   url: API_ENDPOINT,
   method: "post",
+  data: qs.stringify(event.queryStringParameters),
+  responseType: 'arraybuffer',
   headers: {
     "Content-Type": "application/x-www-form-urlencoded;charset:gb2312"
-  },
-  data: qs.stringify(event.queryStringParameters)
+  }
+
 }).then(function(response){
 	
 //axios.get( API_ENDPOINT )
