@@ -14,7 +14,13 @@ let dataa = "name=%C0%EE%C3%F7&sex=0&y=1983&m=3&d=14&h=2&i=0&cY=119&cM=1012&cD=3
 
 let params = event.queryStringParameters;
 //let paramss = iconv.encode(params, 'gb2312');
-
+    axios.post(API_ENDPOINT, {
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded'
+        },
+        params: JSON.stringify(dataa),
+        responseType: "arraybuffer"
+    }).then((response) => {
  
   //   axios.post(API_ENDPOINT, data,{
     //baseURL: 'https://12.hr9.top',
@@ -22,7 +28,7 @@ let params = event.queryStringParameters;
  //   headers: {
   //    'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
  //   }}).then(function(response){
-  axios.post(API_ENDPOINT,qs.stringify(params, { indices: false }),{ responseType: "arraybuffer" }).then(function(response){
+ // axios.post(API_ENDPOINT,qs.stringify(params, { indices: false }),{ responseType: "arraybuffer" }).then(function(response){
       
 var html = iconv.decode(response.data, 'gb2312'); //return unicode string from GBK encoded bytes
 
