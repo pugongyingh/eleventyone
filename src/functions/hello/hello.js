@@ -12,7 +12,7 @@ exports.handler = ( event, context, callback ) => {
 let data = "name=%C0%EE%C3%F7&sex=0&y=1971&m=3&d=10&h=12&i=0&cY=107&cM=867&cD=26010&cH=312006&term1=4%2F%A3%A8+3+%D4%C2+6+%C8%D5+13+%A3%BA52+%A3%A9&term2=5%2F%A3%A8+3+%D4%C2+21+%C8%D5+14+%A3%BA45+%A3%A9&start_term=338836&end_term=2271044&start_term1=4%2F%A3%A8+3+%D4%C2+6+%C8%D5+13+%A3%BA52+%A3%A9&end_term1=6%2F%A3%A8+4+%D4%C2+5+%C8%D5+18+%A3%BA50+%A3%A9&lDate=1971%C4%EA%B6%FE%D4%C214%C8%D5&order_type=1"
 let dataa = "name=李明&sex=0&y=1983&m=3&d=14&h=2&i=0&cY=119&cM=1012&cD=30429&cH=365029&term1=6/（ 4 月 5 日 16 ：41 ）&term2=7/（ 4 月 20 日 23 ：49 ）&start_term=811084&end_term=1843856&start_term1=6/（ 4 月 5 日 16 ：41 ）&end_term1=8/（ 5 月 6 日 10 ：10 ）&lDate=1983年三月初3日&order_type=1"
 
-let params = event.queryStringParameters;
+//let params = event.queryStringParameters;
 //let paramss = iconv.encode(params, 'gb2312');
     axios.post(API_ENDPOINT, {
         headers: {
@@ -41,12 +41,12 @@ let params = event.queryStringParameters;
 		//const	body = iconv.decode(response.data,'gb2312');
     	//const	body = iconv.decode(response.data,'utf-8').toString();
        //const $resultsPage = cheerio.load(response.data);
-	const $resultsPage = cheerio.load(html, { decodeEntities: false });
+	//const $resultsPage = cheerio.load(html, { decodeEntities: false });
 
  
  let hhh = '<html><head><link href="https://sharp-almeida-02bb5b.netlify.com/ttt.css" rel="stylesheet" type="text/css"></head><body><div class="app"><div class="subs_2"><div class="c_1_title"><strong>&#x751F;&#x8FB0;&#x516B;&#x5B57;&#x8BE6;&#x6279;</strong></div><div class="c_1_text">';
    let www = '</div></div></body></html>'; 
-    var fruits = [];
+//    var fruits = [];
 
 //$resultsPage('div[class="suanming_s"]').children().each(function(i, elem) {
 //  fruits[i] = $(this).html();
