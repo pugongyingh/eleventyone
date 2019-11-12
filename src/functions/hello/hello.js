@@ -39,7 +39,7 @@ start_term1:8/（ 5 月 5 日 21 ：49 ）,
 end_term1:10/（ 6 月 6 日 2 ：19 ）,
 lDate:1985年四月初4日,
 order_type:1     
-    }
+    },
     responseType: "arraybuffer"
   }).then(function(response){
  
