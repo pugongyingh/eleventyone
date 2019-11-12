@@ -14,8 +14,34 @@ let dataa = "name=%C0%EE%C3%F7&sex=0&y=1983&m=3&d=14&h=2&i=0&cY=119&cM=1012&cD=3
 
 //let params = event.queryStringParameters.term1;
 //let paramss = iconv.encode(params, 'gb2312');
-//axios.get( API_ENDPOINT )
-//		.then( ( response ) => {
+  axios(API_ENDPOINT, {
+    method: "post",
+    headers: {
+      "Content-Type": "application/x-www-form-urlencoded"
+    },
+     params: {
+	name:李明,
+sex:0,
+y:1985,
+m:4,
+d:22,
+h:4,
+i:0,
+cY:121,
+cM:1037,
+cD:31198,
+cH:374258,
+term1:8/（ 5 月 5 日 21 ：49 ）,
+term2:9/（ 5 月 21 日 10 ：47 ）,
+start_term:1491032,
+end_term:1203568,
+start_term1:8/（ 5 月 5 日 21 ：49 ）,
+end_term1:10/（ 6 月 6 日 2 ：19 ）,
+lDate:1985年四月初4日,
+order_type:1     
+    }
+    responseType: "arraybuffer"
+  }).then(function(response){
  
   //   axios.post(API_ENDPOINT, data,{
     //baseURL: 'https://12.hr9.top',
@@ -23,7 +49,7 @@ let dataa = "name=%C0%EE%C3%F7&sex=0&y=1983&m=3&d=14&h=2&i=0&cY=119&cM=1012&cD=3
  //   headers: {
   //    'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
  //   }}).then(function(response){
-  axios.post(API_ENDPOINT, dataa,{ responseType: "arraybuffer" }).then(function(response){
+//  axios.post(API_ENDPOINT, dataa,{ responseType: "arraybuffer" }).then(function(response){
       
 var html = iconv.decode(response.data, 'gb2312'); //return unicode string from GBK encoded bytes
 
