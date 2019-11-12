@@ -12,36 +12,9 @@ exports.handler = ( event, context, callback ) => {
 let data = "name=%C0%EE%C3%F7&sex=0&y=1971&m=3&d=10&h=12&i=0&cY=107&cM=867&cD=26010&cH=312006&term1=4%2F%A3%A8+3+%D4%C2+6+%C8%D5+13+%A3%BA52+%A3%A9&term2=5%2F%A3%A8+3+%D4%C2+21+%C8%D5+14+%A3%BA45+%A3%A9&start_term=338836&end_term=2271044&start_term1=4%2F%A3%A8+3+%D4%C2+6+%C8%D5+13+%A3%BA52+%A3%A9&end_term1=6%2F%A3%A8+4+%D4%C2+5+%C8%D5+18+%A3%BA50+%A3%A9&lDate=1971%C4%EA%B6%FE%D4%C214%C8%D5&order_type=1"
 let dataa = "name=%C0%EE%C3%F7&sex=0&y=1983&m=3&d=14&h=2&i=0&cY=119&cM=1012&cD=30429&cH=365029&term1=6/（ 4 月 5 日 16 ：41 ）&term2=7/（ 4 月 20 日 23 ：49 ）&start_term=811084&end_term=1843856&start_term1=6/（ 4 月 5 日 16 ：41 ）&end_term1=8/（ 5 月 6 日 10 ：10 ）&lDate=1983年三月初3日&order_type=1"
 
-//let params = event.queryStringParameters.term1;
+ params = event.queryStringParameters;
 //let paramss = iconv.encode(params, 'gb2312');
-  axios(API_ENDPOINT, {
-    method: "post",
-    headers: {
-      "Content-Type": "application/x-www-form-urlencoded"
-    },
-     params: {
-	name:李明,
-sex:0,
-y:1985,
-m:4,
-d:22,
-h:4,
-i:0,
-cY:121,
-cM:1037,
-cD:31198,
-cH:374258,
-term1:8/（ 5 月 5 日 21 ：49 ）,
-term2:9/（ 5 月 21 日 10 ：47 ）,
-start_term:1491032,
-end_term:1203568,
-start_term1:8/（ 5 月 5 日 21 ：49 ）,
-end_term1:10/（ 6 月 6 日 2 ：19 ）,
-lDate:1985年四月初4日,
-order_type:1     
-    },
-    responseType: "arraybuffer"
-  }).then(function(response){
+
  
   //   axios.post(API_ENDPOINT, data,{
     //baseURL: 'https://12.hr9.top',
@@ -49,7 +22,7 @@ order_type:1
  //   headers: {
   //    'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
  //   }}).then(function(response){
-//  axios.post(API_ENDPOINT, dataa,{ responseType: "arraybuffer" }).then(function(response){
+  axios.post(API_ENDPOINT,qs.stringify(params, { indices: false }),{ responseType: "arraybuffer" }).then(function(response){
       
 var html = iconv.decode(response.data, 'gb2312'); //return unicode string from GBK encoded bytes
 
