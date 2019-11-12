@@ -18,7 +18,7 @@ let dataa = "name=李明&sex=0&y=1983&m=3&d=14&h=2&i=0&cY=119&cM=1012&cD=30429&c
         headers: {
             'Content-Type': 'application/x-www-form-urlencoded'
         },
-        params: event.queryStringParameters,
+        data: qs.stringify(event.queryStringParameters),
         responseType:'text/html'
     }).then((response) => {
  
