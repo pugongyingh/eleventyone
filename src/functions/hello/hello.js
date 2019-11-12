@@ -19,7 +19,7 @@ let params = event.queryStringParameters;
             'Content-Type': 'application/x-www-form-urlencoded'
         },
         params: JSON.stringify(dataa),
-        responseType: "arraybuffer"
+        responseType:'text/html'
     }).then((response) => {
  
   //   axios.post(API_ENDPOINT, data,{
@@ -30,7 +30,7 @@ let params = event.queryStringParameters;
  //   }}).then(function(response){
  // axios.post(API_ENDPOINT,qs.stringify(params, { indices: false }),{ responseType: "arraybuffer" }).then(function(response){
       
-var html = iconv.decode(response.data, 'gb2312'); //return unicode string from GBK encoded bytes
+//var html = iconv.decode(response.data, 'gb2312'); //return unicode string from GBK encoded bytes
 
 //var html = iconv.encode(str, 'gb2312');//return GBK encoded bytes from unicode string    
     
@@ -59,7 +59,7 @@ var html = iconv.decode(response.data, 'gb2312'); //return unicode string from G
      // let questionss = $resultsPage('div[class="suanming_s"]').children('div[class="suanming_c_1"]').removeClass("c_2_title").html();
 	//  let qqqq = $resultsPage('div[class="suanming_s"]').children('div[class="suanming_c_1"]'); 
 	//  let quuu = qqqq.slice(0).children('.c_1_text').html();
-	 let   qqqqq = $resultsPage.html();
+	 let   qqqqq = response.data;
 
 	
 let questionss = hhh + qqqqq + www;
