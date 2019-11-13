@@ -11,6 +11,7 @@ const qs = require('qs');
 exports.handler = async function(event, context, callback) {
   if (event.httpMethod === 'POST') {
   const  str = iconv.encode("李明", 'gbk').toString('Hex');
+   var  arr = [];
     while(str.length) {
       var substr = str.substring(0, 2);
       arr.push(substr);
