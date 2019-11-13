@@ -10,10 +10,10 @@ const API_ENDPOINT = 'http://x.shahaizi.com/invite/order_review_2.php';
 exports.handler = async function(event, context, callback) {
   if (event.httpMethod === 'POST') {
 
-      console.log('clarifai res', JSON.stringify(res, null, 4))
+      console.log('clarifai res', "888")
       callback(null, {
         statusCode: 200,
-        body: JSON.stringify(res)
+        body: "777"
       })
     
   }
