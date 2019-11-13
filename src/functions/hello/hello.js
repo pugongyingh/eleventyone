@@ -12,13 +12,13 @@ exports.handler = ( event, context, callback ) => {
 let data = "name=%C0%EE%C3%F7&sex=0&y=1971&m=3&d=10&h=12&i=0&cY=107&cM=867&cD=26010&cH=312006&term1=4%2F%A3%A8+3+%D4%C2+6+%C8%D5+13+%A3%BA52+%A3%A9&term2=5%2F%A3%A8+3+%D4%C2+21+%C8%D5+14+%A3%BA45+%A3%A9&start_term=338836&end_term=2271044&start_term1=4%2F%A3%A8+3+%D4%C2+6+%C8%D5+13+%A3%BA52+%A3%A9&end_term1=6%2F%A3%A8+4+%D4%C2+5+%C8%D5+18+%A3%BA50+%A3%A9&lDate=1971%C4%EA%B6%FE%D4%C214%C8%D5&order_type=1"
 let dataa = "name=李明&sex=0&y=1983&m=3&d=14&h=2&i=0&cY=119&cM=1012&cD=30429&cH=365029&term1=6/（ 4 月 5 日 16 ：41 ）&term2=7/（ 4 月 20 日 23 ：49 ）&start_term=811084&end_term=1843856&start_term1=6/（ 4 月 5 日 16 ：41 ）&end_term1=8/（ 5 月 6 日 10 ：10 ）&lDate=1983年三月初3日&order_type=1"
 
-//let params = event.queryStringParameters;
+let params = qs.stringify(event.queryStringParameters);
 //let paramss = iconv.encode(params, 'gb2312');
     axios.post(API_ENDPOINT, {
         headers: {
             'Content-Type': 'application/x-www-form-urlencoded'
         },
-        data: qs.stringify(event.queryStringParameters),
+        data: data,
         responseType:'text/html'
     }).then((response) => {
  
@@ -62,10 +62,10 @@ let dataa = "name=李明&sex=0&y=1983&m=3&d=14&h=2&i=0&cY=119&cM=1012&cD=30429&c
 	 let   qqqqq = response.data;
 
 	
-let questionss = hhh + qqqqq + www;
+//let questionss = hhh + qqqqq + www;
  	// let questionss88 =  $r88('div[class="c_1_text"]').html();
       // let questionss = $resultsPage('div[class="con layui-text"]').text();
-  //  questionss = hhh + questionss + www;
+    questionss = params;
     //var xx=new GB2312UTF8();
     //var Utf8=xx.Gb2312ToUtf8(questionss);
     //var Gb2312=xx.Utf8ToGb2312(questionss);
