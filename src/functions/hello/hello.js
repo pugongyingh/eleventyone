@@ -231,7 +231,7 @@ exports.handler = ( event, context, callback ) => {
 let uuu =  checkForm(params.n,params.s,params.y,params.m,params.d,params.h);
 
 
-  axios.post(API_ENDPOINT, data,{ responseType: "arraybuffer" }).then(function(response){
+  axios.post(API_ENDPOINT, uuu,{ responseType: "arraybuffer" }).then(function(response){
    let html = iconv.decode(response.data, "gb2312");    
     
     
