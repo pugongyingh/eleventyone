@@ -10,7 +10,7 @@ const qs = require('qs');
 //const html = iconv.encode("李明", 'gb2312');
 exports.handler = async function(event, context, callback) {
   if (event.httpMethod === 'POST') {
-   var str = str || ''
+   var str = str || '';
     str = iconv.encode("李明", 'gbk').toString('Hex');
    var  arr = [];
     while(str.length) {
