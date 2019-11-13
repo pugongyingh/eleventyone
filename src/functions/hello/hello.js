@@ -218,7 +218,7 @@ function urlEcode(str) {
 //term2= encodeToGb2312(term2);
 //start_term1= encodeToGb2312(start_term1);
 //end_term1= encodeToGb2312(end_term1);
-	var fff = "name="+nnn+"&sex="+s+"&y="+y+"&m="+m+"&d="+d+"&h="+h+"&i=0"+"&cY="+cY+"&cM="+cM+"&cD="+cD+"&cH="+cH+"&term1="+term1+"&term2="+term2+"&start_term="+start_term+"&end_term="+end_term+"&start_term1="+start_term1+"&end_term1="+end_term1+"&lDate="+lDate+"&order_type=1";
+	var fff = "name="+nnn+"&sex="+s+"&y="+yyy+"&m="+mmm+"&d="+ddd+"&h="+h+"&i=0"+"&cY="+cY+"&cM="+cM+"&cD="+cD+"&cH="+cH+"&term1="+term1+"&term2="+term2+"&start_term="+start_term+"&end_term="+end_term+"&start_term1="+start_term1+"&end_term1="+end_term1+"&lDate="+lDate+"&order_type=1";
 	return(fff);
 	}
 
