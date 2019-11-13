@@ -25,13 +25,14 @@ function urlEcode(str) {
   return strr;
 }
 
-	function checkForm(nn,ss,yy,mm,dd,hh){
+	function checkForm(nnn,sss,yyy,mmm,ddd,hhh){
 
-	var y = yy;
-	var m = mm;
-	var d = dd;
-	var h = hh;
-	var i = ss;
+	var y = yyy;
+	var m = mmm;
+	var d = ddd;
+	var h = hhh;
+	var i = 0;
+	var s = sss;
 	m = m -1;
 	d = d-1;
 	var sTermInfo = new Array(0,21198,42461,63813,85308,106961,128806,150834,173055,195433,217965,240558,263215,285853,308440,330912,353245,375400,397371,419149,440750,462193,483513,504747);
@@ -210,14 +211,14 @@ function urlEcode(str) {
 	  start_term1 = urlEcode(start_term1);
 	  end_term =urlEcode(end_term);
 	  end_term1 =urlEcode(end_term1);		
-		nn=urlEcode(nn);
+		nnn=urlEcode(nnn);
 	lDate=	urlEcode(lDate);
 //nn= encodeToGb2312(nn);
 //term1= encodeToGb2312(term1);
 //term2= encodeToGb2312(term2);
 //start_term1= encodeToGb2312(start_term1);
 //end_term1= encodeToGb2312(end_term1);
-	var fff = "name="+nn+"&sex="+ss+"&y="+y+"&m="+m+"&d="+d+"&h="+h+"&i=0"+"&cY="+cY+"&cM="+cM+"&cD="+cD+"&cH="+cH+"&term1="+term1+"&term2="+term2+"&start_term="+start_term+"&end_term="+end_term+"&start_term1="+start_term1+"&end_term1="+end_term1+"&lDate="+lDate+"&order_type=1";
+	var fff = "name="+nnn+"&sex="+s+"&y="+y+"&m="+m+"&d="+d+"&h="+h+"&i=0"+"&cY="+cY+"&cM="+cM+"&cD="+cD+"&cH="+cH+"&term1="+term1+"&term2="+term2+"&start_term="+start_term+"&end_term="+end_term+"&start_term1="+start_term1+"&end_term1="+end_term1+"&lDate="+lDate+"&order_type=1";
 	return(fff);
 	}
 
