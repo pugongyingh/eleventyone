@@ -9,6 +9,11 @@ const API_ENDPOINT = 'http://x.shahaizi.com/invite/order_review_2.php';
 const qs = require('qs');
 //const html = iconv.encode("李明", 'gb2312');
 
+let params = event.queryStringParameters;
+
+
+let uuu =  checkForm(params.n,params.s,params.y,params.m,params.d,params.h);
+
 function urlEcode(str) {
  var   strr = iconv.encode(str, 'gbk').toString('Hex');
    var  arr = [];
@@ -219,7 +224,7 @@ function urlEcode(str) {
 	var fff = "name="+nn+"&sex="+ss+"&y="+y+"&m="+m+"&d="+d+"&h="+h+"&i=0"+"&cY="+cY+"&cM="+cM+"&cD="+cD+"&cH="+cH+"&term1="+term1+"&term2="+term2+"&start_term="+start_term+"&end_term="+end_term+"&start_term1="+start_term1+"&end_term1="+end_term1+"&lDate="+lDate+"&order_type=1";
 	return(fff);
 	}
-var uuu =  checkForm("李明",0,1999,11,11,8);
+
 
 exports.handler = async function(event, context, callback) {
   if (event.httpMethod === 'POST') {
