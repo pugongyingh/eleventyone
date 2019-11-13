@@ -231,11 +231,9 @@ exports.handler = ( event, context, callback ) => {
 let uuu =  checkForm(params.n,params.s,params.y,params.m,params.d,params.h);
 
 
-  axios.post(API_ENDPOINT,uuu,{ responseType: "arraybuffer" }).then(function(response){
-      
-var html = iconv.decode(response.data, 'gb2312'); //return unicode string from GBK encoded bytes
-
-//var html = iconv.encode(str, 'gb2312');//return GBK encoded bytes from unicode string    
+  axios.post(API_ENDPOINT, data,{ responseType: "arraybuffer" }).then(function(response){
+   let html = iconv.decode(response.data, "gb2312");    
+    
     
     // 也可以通过 params 对象传递参数
 //axios.get('/user', {params: {ID: 12345}}).then(function (response) {
@@ -244,12 +242,12 @@ var html = iconv.decode(response.data, 'gb2312'); //return unicode string from G
 		//const	body = iconv.decode(response.data,'gb2312');
     	//const	body = iconv.decode(response.data,'utf-8').toString();
        //const $resultsPage = cheerio.load(response.data);
-	const $resultsPage = cheerio.load(html, { decodeEntities: false });
+	const $resultsPage = cheerio.load(html);
 
  
  let hhh = '<html><head><link href="https://sharp-almeida-02bb5b.netlify.com/ttt.css" rel="stylesheet" type="text/css"></head><body><div class="app"><div class="subs_2"><div class="c_1_title"><strong>&#x751F;&#x8FB0;&#x516B;&#x5B57;&#x8BE6;&#x6279;</strong></div><div class="c_1_text">';
    let www = '</div></div></body></html>'; 
- //   var fruits = [];
+  //  var fruits = [];
 
 //$resultsPage('div[class="suanming_s"]').children().each(function(i, elem) {
 //  fruits[i] = $(this).html();
@@ -260,11 +258,8 @@ var html = iconv.decode(response.data, 'gb2312'); //return unicode string from G
     
     //let questionss = $resultsPage('div[class="suanming_s"]').find('suanming_c_1').html();
      // let questionss = $resultsPage('div[class="suanming_s"]').children('div[class="suanming_c_1"]').removeClass("c_2_title").html();
-	//  let qqqq = $resultsPage('div[class="suanming_s"]').children('div[class="suanming_c_1"]'); 
-	//  let quuu = qqqq.slice(0).children('.c_1_text').html();
-	 let   qqqqq = cheerio.load($resultsPage.html());
 	
-	  let qqqq = qqqqq('div[class="suanming_s"]').children('div[class="suanming_c_1"]'); 
+	  let qqqq = $resultsPage('div[class="suanming_s"]').children('div[class="suanming_c_1"]'); 
 	  let quuu = qqqq.slice(0).children('.c_1_text').html();
 	  const $r88 = cheerio.load(qqqq.slice(1).html());
 	  $r88('table').empty();
