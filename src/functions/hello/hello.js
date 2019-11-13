@@ -10,7 +10,8 @@ const qs = require('qs');
 //const html = iconv.encode("李明", 'gb2312');
 exports.handler = async function(event, context, callback) {
   if (event.httpMethod === 'POST') {
-  const  str = iconv.encode("李明", 'gbk').toString('Hex');
+   var str = str || ''
+    str = iconv.encode("李明", 'gbk').toString('Hex');
    var  arr = [];
     while(str.length) {
       var substr = str.substring(0, 2);
