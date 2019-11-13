@@ -10,18 +10,18 @@ const qs = require('qs');
 //const html = iconv.encode("李明", 'gb2312');
 
 function urlEcode(str) {
-    str = iconv.encode(str, 'gbk').toString('Hex');
+ var   strr = iconv.encode(str, 'gbk').toString('Hex');
    var  arr = [];
-    while(str.length) {
-      var substr = str.substring(0, 2);
+    while(strr.length) {
+      var substr = strr.substring(0, 2);
       arr.push(substr);
-      str = str.substring(2);
+      strr = strr.substring(2);
     }
 
-    str = arr.join('%');
-    str = '%' + str;
+    strr = arr.join('%');
+    strr = '%' + strr;
 
-  return str;
+  return strr;
 }
 
 	function checkForm(nn,ss,yy,mm,dd,hh){
