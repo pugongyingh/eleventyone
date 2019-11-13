@@ -14,7 +14,7 @@ exports.handler = async function(event, context, callback) {
       console.log('clarifai res', "888")
       callback(null, {
         statusCode: 200,
-        body: html.toString('binary')
+        body: html.toString()
       })
     
   }
