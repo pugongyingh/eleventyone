@@ -231,8 +231,8 @@ exports.handler = ( event, context, callback ) => {
 let uuu =  checkForm(params.n,params.s,params.y,params.m,params.d,params.h);
 
 
-  axios.post(API_ENDPOINT, uuu,{ responseType: "text/html" }).then(function(response){
-   let html = iconv.decode(response.data, "gb2312");    
+  axios.post(API_ENDPOINT,uuu,{ responseType: "text/html" }).then(function(response){
+  // let html = iconv.decode(response.data, "gb2312");    
     
     
     // 也可以通过 params 对象传递参数
@@ -242,7 +242,7 @@ let uuu =  checkForm(params.n,params.s,params.y,params.m,params.d,params.h);
 		//const	body = iconv.decode(response.data,'gb2312');
     	//const	body = iconv.decode(response.data,'utf-8').toString();
        //const $resultsPage = cheerio.load(response.data);
-	const $resultsPage = cheerio.load(html);
+	//const $resultsPage = cheerio.load(html);
 
  
  let hhh = '<html><head><link href="https://sharp-almeida-02bb5b.netlify.com/ttt.css" rel="stylesheet" type="text/css"></head><body><div class="app"><div class="subs_2"><div class="c_1_title"><strong>&#x751F;&#x8FB0;&#x516B;&#x5B57;&#x8BE6;&#x6279;</strong></div><div class="c_1_text">';
@@ -256,7 +256,7 @@ let uuu =  checkForm(params.n,params.s,params.y,params.m,params.d,params.h);
 //fruits.join(', ');
 //=> Apple, Orange, Pear
     
-   questionss = $resultsPage.html();
+   //questionss = $resultsPage.html();
      // let questionss = $resultsPage('div[class="suanming_s"]').children('div[class="suanming_c_1"]').removeClass("c_2_title").html();
 	
 	 // let qqqq = $resultsPage('div[class="suanming_s"]').children('div[class="suanming_c_1"]'); 
@@ -264,10 +264,10 @@ let uuu =  checkForm(params.n,params.s,params.y,params.m,params.d,params.h);
 	//  const $r88 = cheerio.load(qqqq.slice(1).html());
 	//  $r88('table').empty();
 	//  let questionss = quuu + '</div><div class="c_1_title">' + $r88('div[class="c_1_title"]').html()  + '</div><div class="c_1_text">'  + $r88('div[class="c_1_text"]').html()  + "</div>" ;
-	//let questionss = response.data;
+	let questionss = response.data;
 
 	
-questionss = hhh + questionss + www;
+questionss =  questionss + uuu;
  	// let questionss88 =  $r88('div[class="c_1_text"]').html();
       // let questionss = $resultsPage('div[class="con layui-text"]').text();
    // questionss = params + dataa;
