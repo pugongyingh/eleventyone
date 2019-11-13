@@ -26,7 +26,7 @@ function urlEcode(str) {
 exports.handler = async function(event, context, callback) {
   if (event.httpMethod === 'POST') {
    var str = str || '';
-    str = iconv.encode("李明", 'gbk').toString('Hex');
+    str = iconv.encode("6/（ 4 月 5 日 16 ：41 ）", 'gbk').toString('Hex');
 
       console.log('clarifai res', "888")
       callback(null, {
