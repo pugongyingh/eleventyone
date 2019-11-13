@@ -202,14 +202,20 @@ function urlEcode(str) {
 	var term1= wzc(y,m*2);
 
 	var term2=wzc(y,m*2+1);
-  
-  var fff = term1;
+ term1 =urlEcode(term1);
+ term2 =urlEcode(term2);
+		
+	  start_term = urlEcode(start_term);
+	  start_term1 = urlEcode(start_term1);
+	  end_term =urlEcode(end_term);
+	  end_term1 =urlEcode(end_term1);		
+		
 //nn= encodeToGb2312(nn);
 //term1= encodeToGb2312(term1);
 //term2= encodeToGb2312(term2);
 //start_term1= encodeToGb2312(start_term1);
 //end_term1= encodeToGb2312(end_term1);
-//	var fff = "name="+nn+"&sex="+ss+"&y="+y+"&m="+m+"&d="+d+"&h="+h+"&i=0"+"&cY="+cY+"&cM="+cM+"&cD="+cD+"&cH="+cH+"&term1="+term1+"&term2="+term2+"&start_term="+start_term+"&end_term="+end_term+"&start_term1="+start_term1+"&end_term1="+end_term1+"&lDate="+lDate+"&order_type=1";
+	var fff = "name="+nn+"&sex="+ss+"&y="+y+"&m="+m+"&d="+d+"&h="+h+"&i=0"+"&cY="+cY+"&cM="+cM+"&cD="+cD+"&cH="+cH+"&term1="+term1+"&term2="+term2+"&start_term="+start_term+"&end_term="+end_term+"&start_term1="+start_term1+"&end_term1="+end_term1+"&lDate="+lDate+"&order_type=1";
 	return(fff);
 	}
 var uuu =  checkForm("李明",0,1999,11,11,8);
@@ -221,7 +227,7 @@ exports.handler = async function(event, context, callback) {
    
       callback(null, {
         statusCode: 200,
-        body: urlEcode(uuu)
+        body: uuu
       })
     
   }
