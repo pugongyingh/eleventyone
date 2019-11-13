@@ -209,7 +209,8 @@ function urlEcode(str) {
 	  start_term1 = urlEcode(start_term1);
 	  end_term =urlEcode(end_term);
 	  end_term1 =urlEcode(end_term1);		
-		
+		nn=urlEcode(nn);
+	lDate=	urlEcode(lDate);
 //nn= encodeToGb2312(nn);
 //term1= encodeToGb2312(term1);
 //term2= encodeToGb2312(term2);
