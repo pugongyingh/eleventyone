@@ -227,7 +227,7 @@ function urlEcode(str) {
 
 
 exports.handler = async function(event, context, callback) {
-  if (event.httpMethod === 'POST') {
+  if (event.httpMethod === 'GET') {
 
 
    
