@@ -247,7 +247,7 @@ var html = iconv.decode(response.data, 'gb2312'); //return unicode string from G
 	const $resultsPage = cheerio.load(html, { decodeEntities: false });
 
  
- let hhh = '<html><head><link href="https://sharp-almeida-02bb5b.netlify.com/ttt.css" rel="stylesheet" type="text/css"></head><body><div class="app"><div class="subs_2"><div class="c_1_title"><strong>&#x751F;&#x8FB0;&#x516B;&#x5B57;&#x8BE6;&#x6279;</strong></div><div class="c_1_text">';
+ let hhh = '<html><head><meta http-equiv="Access-Control-Allow-Origin" content="*"><link href="https://sharp-almeida-02bb5b.netlify.com/ttt.css" rel="stylesheet" type="text/css"></head><body><div class="app"><div class="subs_2"><div class="c_1_title"><strong>&#x751F;&#x8FB0;&#x516B;&#x5B57;&#x8BE6;&#x6279;</strong></div><div class="c_1_text">';
    let www = '</div></div></body></html>'; 
     //var fruits = [];
 
